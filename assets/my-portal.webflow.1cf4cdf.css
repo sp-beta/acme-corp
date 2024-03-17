@@ -3321,12 +3321,13 @@ figcaption {
 }
 
 .dashboard-snapshot-percent-growth {
+  display: flex;
   color: #609952;
   background-color: #e2f3d8;
   border-radius: 1rem;
+  justify-content: center;
   align-items: center;
-  padding: .1rem .7rem .1rem .5rem;
-  display: flex;
+  padding: 0.1rem 0.7rem !important;
 }
 
 .dashboard-snapshot-percent-growth.negative {
@@ -4746,12 +4747,13 @@ figcaption {
   z-index: 100;
 }
 /* =================================added css============== */
+.states .dashboard-snapshot-card {
+    
+}
 .states{
   display: flex;
-  justify-content: space-between;
+  gap: 10px;
   align-items: center;
-  color: white;
-  margin-bottom: 10px;
 }
 .states .states-box{
   background-color: rgba(128, 128, 128, 0.256);
@@ -4802,14 +4804,7 @@ height: 240px;
   text-align: center;
 }
 .map-section{
-  height: 200px;
   margin-bottom: 20px;
-}
-.map-section-leads{
-  height: 50vh;
-  color: white;
-  background-color:  rgba(128, 128, 128, 0.256);
-  text-align: center;
 }
 .learn-table td{
   padding: 15px 5px;
