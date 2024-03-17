@@ -4801,6 +4801,10 @@ height: 240px;
 .graph{
   text-align: center;
 }
+.map-section{
+  height: 200px;
+  margin-bottom: 20px;
+}
 .map-section-leads{
   height: 50vh;
   color: white;

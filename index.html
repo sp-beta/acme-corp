@@ -54,6 +54,10 @@
 		</script>
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+		<script
+src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+</script>
+
 		<link
 			href="./assets/favicon.ico"
 			rel="shortcut icon"
@@ -567,12 +571,12 @@ a,
 									</tbody>
 								</table>
 								<div class="graph">
-									<img src="/assets//bar-graph-example.png" alt="Graph here">
+									<canvas id="myChart" style="width:100%;max-width:600px"></canvas>
 								</div>
 							</div>
 							<div class="col-lg-6 first-right">
                                <div class="map-section">
-                                <h1>map here</h1>
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.6563523668997!2d77.65805117464618!3d12.993817914391657!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1136218ea079%3A0xc6bf20ea89abad92!2sGoogle%20Bangalore%20-%20Old%20Madras%20Road!5e0!3m2!1sen!2sin!4v1710672497864!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 							   </div>
 							   <div class="project-boxes row">
                                <div class="col-lg-6"><div class="child">Project 1</div></div>
@@ -592,7 +596,7 @@ a,
 							<div class="col-lg-3"><div class="child">Project 1</div></div>
 						</div>
 						<div class="map-section-leads mb-5">
-							<h1>Map here</h1>
+							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.6563523668997!2d77.65805117464618!3d12.993817914391657!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1136218ea079%3A0xc6bf20ea89abad92!2sGoogle%20Bangalore%20-%20Old%20Madras%20Road!5e0!3m2!1sen!2sin!4v1710672497864!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 						</div>
 					</div>
 				</div>
@@ -665,7 +669,7 @@ a,
 							</tbody>
 						</table>
 						<div class="map-section-leads mb-5">
-							<h1>Graph here</h1>
+							<canvas id="learnChart" style="width:100%;max-width:700px"></canvas>
 						</div>
 					</div>
 				</div>
@@ -682,5 +686,45 @@ a,
 			type="text/javascript"
 		></script>
 		<script src="./map.js" type="module"></script>
+		<script>
+			const xValues = ["Italy", "France", "Spain", "USA", "Argentina"];
+			const yValues = [55, 49, 44, 24, 50];
+			const barColors = ["white", "green","black","green","grey"];
+			
+			new Chart("myChart", {
+			  type: "bar",
+			  data: {
+				labels: xValues,
+				datasets: [{
+				  backgroundColor: barColors,
+				  data: yValues
+				}]
+			  },
+			  options: {
+				legend: {display: false},
+				title: {
+				  display: true,
+				  text: "World Wine Production 2018"
+				}
+			  }
+			});
+			new Chart("learnChart", {
+			  type: "bar",
+			  data: {
+				labels: xValues,
+				datasets: [{
+				  backgroundColor: barColors,
+				  data: yValues
+				}]
+			  },
+			  options: {
+				legend: {display: false},
+				title: {
+				  display: true,
+				  text: "World Wine Production 2018"
+				}
+			  }
+			});
+			</script>
 	</body>
 </html>
